@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px; 
+}
+
+.container {
+    background-color: violet;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px 8px white;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: 1s;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #007bff;
+}
+
+#addTaskBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #0056b3;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: orange;
+    border: 1px solid #eee;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    transition: 2s;
+}
+
+#taskList li.completed {
+    background-color: #e6ffe6;
+    text-decoration: line-through;
+    color: #888;
+}
+
+#taskList li button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#taskList li button.delete-btn:hover {
+    background-color:red;
+}
+
+#taskList li .task-text {
+    flex-grow: 1;
+    text-align: left;
+    cursor: pointer; 
+}
+
+@media (max-width: 600px) {
+    .input-section {
+        flex-direction: column;
+    }
+
+    #addTaskBtn {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
